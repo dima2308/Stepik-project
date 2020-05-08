@@ -30,7 +30,7 @@ def browser(request):
     elif browser_name == "chrome":
         options = Options()
         options.add_experimental_option('prefs', {"intl.accept_languages": user_language})
-        browser = webdriver.Chrome('D:\chromedriver', options=options)
+        browser = webdriver.Chrome(options=options)
 
     yield browser
     print("\nquit browser..")
